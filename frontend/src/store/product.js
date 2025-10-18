@@ -21,6 +21,7 @@ export const useProductStore = create((set) => ({
   fetchProducts: async () => {
     const res = await fetch("https://mern-crud-yk9x.onrender.com/api/products");
     const data = await res.json();
+    
     set({ products: data.data });
   },
   deleteProduct: async (pid) => {
